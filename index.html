@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
-  </head>
-  <body>
-    
-    <h1>Hi friend, try edit me!</h1>
+    <title>Multiple Buttons Redirect</title>
+</head>
+<body>
+    <button onclick="window.location.href='https://google.com'">Go to Google</button>
+    <button onclick="window.location.href='https://youtube.com'">Go to YouTube</button>
+    <button onclick="redirectToRandomVideo()">Go to Random Video</button>
 
-  </body>
+    <script>
+        function redirectToRandomVideo() {
+            const videoUrls = [
+                'https://www.youtube.com/watch?v=e_QyWV8xkiQ&t=121s',
+                'https://www.youtube.com/watch?v=unYC42tG0LM',
+                'https://www.youtube.com/watch?v=IrNZF80Op-U',
+                'https://www.youtube.com/watch?v=x0iompYj0dM'
+            ];
+
+            // Randomly choose a video URL
+            const randomVideo = videoUrls[Math.floor(Math.random() * videoUrls.length)];
+
+            // Redirect to the chosen video
+            window.location.href = randomVideo;
+        }
+    </script>
+</body>
 </html>
