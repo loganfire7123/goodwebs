@@ -63,6 +63,54 @@
         button:nth-child(3):hover {
             background-color: #E64A19;
         }
+
+        button:nth-child(4) {
+            background-color: #FF9800;
+        }
+
+        button:nth-child(4):hover {
+            background-color: #FB8C00;
+        }
+
+        button:nth-child(5) {
+            background-color: #2196F3;
+        }
+
+        button:nth-child(5):hover {
+            background-color: #1976D2;
+        }
+
+        button:nth-child(6) {
+            background-color: #E91E63;
+        }
+
+        button:nth-child(6):hover {
+            background-color: #D81B60;
+        }
+
+        button:nth-child(7) {
+            background-color: #9C27B0;
+        }
+
+        button:nth-child(7):hover {
+            background-color: #8E24AA;
+        }
+
+        button:nth-child(8) {
+            background-color: #00BCD4;
+        }
+
+        button:nth-child(8):hover {
+            background-color: #0097A7;
+        }
+
+        button:nth-child(9) {
+            background-color: #673AB7;
+        }
+
+        button:nth-child(9):hover {
+            background-color: #5E35B1;
+        }
     </style>
 </head>
 <body>
@@ -72,26 +120,27 @@
     <div class="button-container">
         <button onclick="window.location.href='https://google.com'">Go to Google</button>
         <button onclick="window.location.href='https://youtube.com'">Go to YouTube</button>
-        <button onclick="redirectToRandomVideo()">Go to Random Video</button>
+        <button onclick="redirectToRandomURL()">Random Video by Logan Studios</button>
     </div>
 
     <script>
-        function redirectToRandomVideo() {
-            const videoUrls = [
+        function redirectToRandomURL() {
+            const urls = [
                 'https://www.youtube.com/watch?v=e_QyWV8xkiQ&t=121s',
                 'https://www.youtube.com/watch?v=unYC42tG0LM',
                 'https://www.youtube.com/watch?v=IrNZF80Op-U',
                 'https://www.youtube.com/watch?v=x0iompYj0dM'
             ];
 
-            // Randomly choose a video URL
-            const randomVideo = videoUrls[Math.floor(Math.random() * videoUrls.length)];
+            // Randomly choose a URL
+            const randomURL = urls[Math.floor(Math.random() * urls.length)];
 
-            // Redirect to the chosen video
-            window.location.href = randomVideo;
+            // Redirect to the chosen URL
+            window.location.href = randomURL;
         }
     </script>
 
 </body>
 </html>
+
 
