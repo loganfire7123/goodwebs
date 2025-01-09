@@ -4,11 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiple Buttons Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 8px;
+            width: 200px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button:nth-child(2) {
+            background-color: #4285F4;
+        }
+
+        button:nth-child(2):hover {
+            background-color: #357AE8;
+        }
+
+        button:nth-child(3) {
+            background-color: #FF5722;
+        }
+
+        button:nth-child(3):hover {
+            background-color: #E64A19;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="window.location.href='https://google.com'">Go to Google</button>
-    <button onclick="window.location.href='https://youtube.com'">Go to YouTube</button>
-    <button onclick="redirectToRandomVideo()">Go to Random Video</button>
+
+    <h1>Choose Your Destination</h1>
+
+    <div class="button-container">
+        <button onclick="window.location.href='https://google.com'">Go to Google</button>
+        <button onclick="window.location.href='https://youtube.com'">Go to YouTube</button>
+        <button onclick="redirectToRandomVideo()">Go to Random Video</button>
+    </div>
 
     <script>
         function redirectToRandomVideo() {
@@ -26,5 +91,7 @@
             window.location.href = randomVideo;
         }
     </script>
+
 </body>
 </html>
+
